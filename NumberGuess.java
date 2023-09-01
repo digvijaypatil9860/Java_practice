@@ -1,7 +1,18 @@
+
+import java.util.Random;
 import java.util.Scanner;
+
 public class NumberGuess {
     public static void main(String args[]) {
-        int num = 25;
+
+     
+        // 2. Random class
+
+        Random random = new Random();
+
+        int num = random.nextInt(100);
+        System.out.println(num);
+
         int attempt = 0;
         int max_tries = 5;
         Scanner sc = new Scanner(System.in);
@@ -21,8 +32,9 @@ public class NumberGuess {
                 System.out.println("Invalid input. Enter a number between 1 and 100.");
             }
             attempt++;
+
         }
-
+        sc.close();
     }
-}
 
+}
